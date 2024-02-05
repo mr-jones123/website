@@ -25,9 +25,18 @@ noButton.addEventListener("click", function () {
     }
   }
 });
-
+document.getElementById('playButton').addEventListener('click', function() {
+  var audio = document.getElementById('myAudio');
+  if (audio.paused) {
+      audio.play();
+      this.textContent = "Pause";
+  } else {
+      audio.pause();
+      this.textContent = "Play Song";
+  }
+});
 function handleYesClick() {
-  titleElement.innerHTML = "Yayyy!! :3";
+  titleElement.innerHTML = "Yayyy!! SEE U :3333";
   buttonsContainer.classList.add("hidden");
   changeImage("yes");
 }
@@ -44,10 +53,10 @@ function generateMessage(noCount) {
   const messages = [
     "No",
     "Are you sure?",
-    "Pookie please",
-    "Don't do this to me :(",
-    "You're breaking my heart",
-    "I'm gonna cry...",
+    "ARE YOU REALLY REALLY SURE?",
+    "I am a sad kitty :< ",
+    "YES NA PLSS",
+    "PRETTY PLSSSS :<<<",
   ];
 
   const messageIndex = Math.min(noCount, messages.length - 1);
